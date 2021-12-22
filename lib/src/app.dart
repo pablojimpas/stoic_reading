@@ -44,6 +44,7 @@ class MyApp extends StatelessWidget {
           ],
           supportedLocales: const [
             Locale('en', ''), // English, no country code
+            Locale('es', ''), // Spanish, no country code
           ],
 
           // Use AppLocalizations to configure the correct application title
@@ -58,12 +59,14 @@ class MyApp extends StatelessWidget {
           // preferred ThemeMode (light, dark, or system default) from the
           // SettingsController to display the correct theme.
           theme: GruvboxTheme.light().copyWith(
-            colorScheme: const ColorScheme.light()
-                .copyWith(primary: GruvboxColors.fadedOrange),
+            colorScheme: const ColorScheme.light().copyWith(
+              primary: GruvboxColors.fadedOrange,
+            ),
           ),
           darkTheme: GruvboxTheme.dark().copyWith(
-            colorScheme: const ColorScheme.dark()
-                .copyWith(primary: GruvboxColors.neutralOrange),
+            colorScheme: const ColorScheme.dark().copyWith(
+              primary: GruvboxColors.neutralOrange,
+            ),
           ),
           themeMode: settingsController.themeMode,
 
