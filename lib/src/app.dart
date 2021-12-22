@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_gruvbox_theme/flutter_gruvbox_theme.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'sample_feature/sample_item_details_view.dart';
-import 'sample_feature/sample_item_list_view.dart';
+import 'author/author_details_view.dart';
+import 'author/author_list_view.dart';
 import 'settings/settings_controller.dart';
 import 'settings/settings_view.dart';
 
@@ -56,8 +57,14 @@ class MyApp extends StatelessWidget {
           // Define a light and dark color theme. Then, read the user's
           // preferred ThemeMode (light, dark, or system default) from the
           // SettingsController to display the correct theme.
-          theme: ThemeData(),
-          darkTheme: ThemeData.dark(),
+          theme: GruvboxTheme.light().copyWith(
+            colorScheme: const ColorScheme.light()
+                .copyWith(primary: GruvboxColors.fadedOrange),
+          ),
+          darkTheme: GruvboxTheme.dark().copyWith(
+            colorScheme: const ColorScheme.dark()
+                .copyWith(primary: GruvboxColors.neutralOrange),
+          ),
           themeMode: settingsController.themeMode,
 
           // Define a function to handle named routes in order to support
@@ -69,11 +76,11 @@ class MyApp extends StatelessWidget {
                 switch (routeSettings.name) {
                   case SettingsView.routeName:
                     return SettingsView(controller: settingsController);
-                  case SampleItemDetailsView.routeName:
-                    return const SampleItemDetailsView();
-                  case SampleItemListView.routeName:
+                  case AuthorDetailsView.routeName:
+                    return const AuthorDetailsView();
+                  case AuthorListView.routeName:
                   default:
-                    return const SampleItemListView();
+                    return const AuthorListView();
                 }
               },
             );
