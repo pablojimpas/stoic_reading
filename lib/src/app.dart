@@ -83,7 +83,7 @@ class MyApp extends StatelessWidget {
                     return const AuthorDetailsView();
                   case AuthorListView.routeName:
                   default:
-                    return const AuthorListView();
+                    return AuthorListView();
                 }
               },
             );

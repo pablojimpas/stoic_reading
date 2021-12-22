@@ -7,21 +7,33 @@ import 'author_details_view.dart';
 
 /// Displays a list of Authors.
 class AuthorListView extends StatelessWidget {
-  const AuthorListView({
+  AuthorListView({
     Key? key,
-    this.authors = const [
-      Author(1, "Marcus Aurelius"),
-      Author(2, "Seneca"),
-      Author(3, "Epictetus")
-    ],
   }) : super(key: key);
 
   static const routeName = '/';
 
-  final List<Author> authors;
+  late List<Author> authors;
 
   @override
   Widget build(BuildContext context) {
+    authors = [
+      Author(1, AppLocalizations.of(context)!.aratus),
+      Author(2, AppLocalizations.of(context)!.asclepiodotusTacticus),
+      Author(3, AppLocalizations.of(context)!.attalus),
+      Author(4, AppLocalizations.of(context)!.marcusAurelius),
+      Author(5, AppLocalizations.of(context)!.chrysippus),
+      Author(6, AppLocalizations.of(context)!.cleanthes),
+      Author(7, AppLocalizations.of(context)!.ariusDidymus),
+      Author(8, AppLocalizations.of(context)!.epictetus),
+      Author(9, AppLocalizations.of(context)!.hierocles),
+      Author(10, AppLocalizations.of(context)!.panaetius),
+      Author(11, AppLocalizations.of(context)!.posidonius),
+      Author(12, AppLocalizations.of(context)!.musoniusRufus),
+      Author(13, AppLocalizations.of(context)!.seneca),
+      Author(14, AppLocalizations.of(context)!.zeno),
+      Author(15, AppLocalizations.of(context)!.zenodotus),
+    ];
     return Scaffold(
       appBar: AppBar(
         title: Text(AppLocalizations.of(context)!.appTitle),

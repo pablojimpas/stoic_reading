@@ -2,5 +2,22 @@
   "appTitle": "Stoic Reading",
   "@appTitle": {
     "description": "The title of the application"
-  }
+  },
+
+  "musoniusRufus": "Gaius Musonius Rufus",
+  "hierocles": "Hierocles",
+  "marcusAurelius": "Marcus Aurelius",
+  "seneca": "Lucius Annaeus Seneca",
+  "epictetus": "Epictetus",
+  "zeno": "Zeno of Citium",
+  "cleanthes": "Cleanthes of Assos",
+  "chrysippus": "Chrysippus of Soli",
+  "zenodotus": "Zenodotus",
+  "aratus": "Aratus of Soli",
+  "ariusDidymus": "Arius Didymus of Alexandria",
+  "posidonius": "Posidonius of Apameia",
+  "panaetius": "Panaetius of Rhodes",
+  "attalus": "Attalus",
+  "asclepiodotusTacticus": "Asclepiodotus Tacticus"
+
 }
